@@ -20,6 +20,10 @@ const parseEmailContent = (emailBody: string): string => {
 
 // Authentication function
 const authenticate = (req: VercelRequest): boolean => {
+
+  console.log('Auth header:', req.headers.authorization);
+  console.log('API_KEY env:', process.env.API_KEY);
+  
   const authHeader = req.headers.authorization;
   
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
