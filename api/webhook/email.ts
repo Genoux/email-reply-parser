@@ -15,7 +15,7 @@ const parseEmailContent = (emailBody: string): string => {
   const visibleText = parsedEmail.getVisibleText();
   
   // Remove newlines
-  return visibleText.replace(/\r?\n/g, ' ').trim();
+  return visibleText;
 };
 
 // Authentication function
